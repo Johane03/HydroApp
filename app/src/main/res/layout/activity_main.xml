@@ -5,11 +5,52 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/Logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Logo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/Dashboard"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/Weather"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Weather"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/Dashboard"/>
+    <Button
+        android:id="@+id/AboutUs"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="AboutUs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/Weather"/>
+    <Button
+        android:id="@+id/Help"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Help"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/AboutUs"/>
 </RelativeLayout>
