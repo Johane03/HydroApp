@@ -63,8 +63,8 @@ public class SignUpPage extends AppCompatActivity {
         });
 
 
-        textView = findViewById(R.id.info);
-        imageView = findViewById(R.id.google_btn);
+        //textView = findViewById(R.id.info);
+        //imageView = findViewById(R.id.google_btn);
 
 
 
