@@ -6,6 +6,7 @@ import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,6 +43,7 @@ public class DashboardActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(DashboardActivity.this, "Back to login page", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(DashboardActivity.this, MainActivity.class);
                 startActivity(intent);
             }
