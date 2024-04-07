@@ -3,9 +3,12 @@ package com.example.hydroapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.material.button.MaterialButton;
 
@@ -20,10 +23,10 @@ public class SignIn extends AppCompatActivity {
 
         dbHelper = new DatabaseHelper(this);
 
-        EditText usernameEditText = findViewById(R.id.username);
-        EditText passwordEditText = findViewById(R.id.password);
+        EditText usernameEditText = findViewById(R.id.etUsername);
+        EditText passwordEditText = findViewById(R.id.etPassword);
 
-        MaterialButton signInButton = findViewById(R.id.signinbtn);
+        MaterialButton signInButton = findViewById(R.id.btnLogin);
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +48,20 @@ public class SignIn extends AppCompatActivity {
                 }
             }
         });
+
+        // Text Gradient
+        TextView textView = findViewById(R.id.tvSignIn);
+
+        int startColor = getResources().getColor(R.color.gradient_start);
+        int endColor = getResources().getColor(R.color.gradient_end);
+
+        Shader shader = new LinearGradient(
+                0, 0, textView.getTextSize(), 0,
+                startColor, endColor,
+                Shader.TileMode.CLAMP);
+
+        // Apply the gradient shader to the TextView's paint
+        textView.getPaint().setShader(shader);
     }
 }
 

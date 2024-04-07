@@ -1,11 +1,14 @@
 package com.example.hydroapp;
 
 import android.content.Intent;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -30,7 +33,7 @@ public class DashboardActivity extends AppCompatActivity {
             return insets;
         });
 
-        myWeb = findViewById(R.id.myWeb);
+        //myWeb = findViewById(R.id.myWeb);
         myWeb.getSettings().setJavaScriptEnabled(true);
 
         myWeb.setVerticalScrollBarEnabled(true);
@@ -48,5 +51,19 @@ public class DashboardActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Text Gradient
+        TextView textView = findViewById(R.id.tvDashboard);
+
+        int startColor = getResources().getColor(R.color.gradient_start);
+        int endColor = getResources().getColor(R.color.gradient_end);
+
+        Shader shader = new LinearGradient(
+                0, 0, textView.getTextSize(), 0,
+                startColor, endColor,
+                Shader.TileMode.CLAMP);
+
+        // Apply the gradient shader to the TextView's paint
+        textView.getPaint().setShader(shader);
     }
 }

@@ -6,6 +6,8 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -45,8 +47,8 @@ public class SignUpPage extends AppCompatActivity {
 
 
 
-        passwordEditText = findViewById(R.id.password);
-        confirmPasswordEditText = findViewById(R.id.repassword);
+        passwordEditText = findViewById(R.id.etPassword);
+        confirmPasswordEditText = findViewById(R.id.etConfirmPassword);
 
         confirmPasswordEditText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -71,11 +73,11 @@ public class SignUpPage extends AppCompatActivity {
 
         dbHelper = new DatabaseHelper(this);
 
-        EditText username = findViewById(R.id.username);
-        EditText email = findViewById(R.id.email);
-        EditText password = findViewById(R.id.password);
+        EditText username = findViewById(R.id.etUsername);
+        EditText email = findViewById(R.id.etEmail);
+        EditText password = findViewById(R.id.etPassword);
 
-        MaterialButton regbtn = findViewById(R.id.signupbtn);
+        MaterialButton regbtn = findViewById(R.id.btnRegister);
 
         regbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,6 +107,20 @@ public class SignUpPage extends AppCompatActivity {
                 }
             }
         });
+
+        // Text Gradient
+        TextView textView = findViewById(R.id.tvSignUp);
+
+        int startColor = getResources().getColor(R.color.gradient_start);
+        int endColor = getResources().getColor(R.color.gradient_end);
+
+        Shader shader = new LinearGradient(
+                0, 0, 0, textView.getTextSize(),
+                startColor, endColor,
+                Shader.TileMode.CLAMP);
+
+        // Apply the gradient shader to the TextView's paint
+        textView.getPaint().setShader(shader);
     }
 
 
