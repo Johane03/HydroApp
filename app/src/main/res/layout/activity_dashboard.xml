@@ -8,19 +8,25 @@
     android:background="@drawable/background"
     tools:context=".DashboardActivity">
 
+    <TextView
+        android:id="@+id/tvDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/heading_dashboard"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_margin="25dp" />
+
     <Button
-        android:id="@+id/Logo"
+        android:id="@+id/btnMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Logo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"/>
-    <Button
-        android:id="@+id/Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"/>
+        android:text="@string/button_menu"
+        android:textSize="20sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_gradient"/>
 
 </RelativeLayout>
