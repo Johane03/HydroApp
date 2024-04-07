@@ -24,7 +24,7 @@
         android:text="@string/menu_text"
         android:textAlignment="center"
         android:textSize="25sp"
-        android:alpha="0.9"/>
+        android:alpha="0.4"/>
 
     <ImageView
         android:id="@+id/Logo"
@@ -41,7 +41,8 @@
         android:layout_centerInParent="true"
         android:text="@string/button_dashboard"
         android:textSize="20sp"
-        android:background="@drawable/button_gradient"/>
+        android:background="@drawable/button_gradient"
+        app:backgroundTint="@null" />
 
     <Button
         android:id="@+id/btnWeather"
@@ -52,7 +53,8 @@
         android:layout_marginTop="16dp"
         android:text="@string/button_weather"
         android:textSize="20sp"
-        android:background="@drawable/button_gradient"/>
+        android:background="@drawable/button_gradient"
+        app:backgroundTint="@null" />
 
     <Button
         android:id="@+id/btnAboutUs"
@@ -63,7 +65,8 @@
         android:layout_marginTop="16dp"
         android:text="@string/button_about"
         android:textSize="20sp"
-        android:background="@drawable/button_gradient"/>
+        android:background="@drawable/button_gradient"
+        app:backgroundTint="@null" />
 
     <Button
         android:id="@+id/btnHelp"
@@ -74,7 +77,8 @@
         android:layout_marginTop="16dp"
         android:text="@string/button_help"
         android:textSize="20sp"
-        android:background="@drawable/button_gradient"/>
+        android:background="@drawable/button_gradient"
+        app:backgroundTint="@null" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -87,6 +91,7 @@
         android:textSize="20sp"
         android:background="@drawable/button_gradient"
         android:layout_marginBottom="10dp"
-        android:layout_marginEnd="10dp"/>
+        android:layout_marginEnd="10dp"
+        app:backgroundTint="@null" />
 
 </RelativeLayout>
