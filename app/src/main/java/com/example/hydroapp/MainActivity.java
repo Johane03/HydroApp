@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.widget.Button;
+import android.content.Intent;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-         Button dashboardButton = findViewById(R.id.Dashboard);
-        Button weather = findViewById(R.id.Weather);
-        Button about = findViewById(R.id.AboutUs);
-        Button help = findViewById(R.id.Help);
+        Button dashboardButton = findViewById(R.id.btnDashboard);
+        Button weather = findViewById(R.id.btnWeather);
+        Button about = findViewById(R.id.btnAboutUs);
+        Button help = findViewById(R.id.btnHelp);
 
         dashboardButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(MainActivity.this, WeatherActivity.class));
+                startActivity(new Intent(MainActivity.this, weather_Main_Activity.class));
             }
         });
 
