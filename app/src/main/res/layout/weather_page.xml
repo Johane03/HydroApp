@@ -10,15 +10,15 @@
     tools:context=".weather_Main_Activity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="383dp"
-        android:layout_height="103dp"
-        android:text="Weather Update"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="48sp"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="96dp" />
+        android:id="@+id/tvAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/heading_weather"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_margin="25dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:hint="Enter City Name"
+            android:hint="@string/city_hint"
             android:inputType="textPersonName" />
 
         <EditText
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:hint="Enter Country Code (optional)"
+            android:hint="@string/countryCode_hint"
             android:inputType="textPersonName" />
 
         <Button
@@ -47,10 +47,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="#004478"
+            android:background="@drawable/button_gradient"
             android:onClick="getWeatherDetails"
-            android:text="Get"
+            android:text="@string/weather_text"
             android:textColor="@color/white"
+            android:textSize="20sp"
             app:backgroundTint="@null" />
 
         <ScrollView
