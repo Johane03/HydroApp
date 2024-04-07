@@ -8,6 +8,27 @@
     android:background="@drawable/background"
     tools:context=".DashboardActivity">
 
+    <WebView
+        android:id="@+id/myWeb"
+        android:layout_width="165dp"
+        android:layout_height="47dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="668dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="368dp"
+        android:layout_height="598dp"
+        android:text="Humidity
+Temperature
+TDS
+Water
+Light
+Battery"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="19dp" />
+
     <Button
         android:id="@+id/Logo"
         android:layout_width="wrap_content"
