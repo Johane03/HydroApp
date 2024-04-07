@@ -39,7 +39,7 @@ public class DashboardActivity extends AppCompatActivity {
         myWeb.setWebChromeClient(new WebChromeClient());
         myWeb.loadUrl("http://41.193.5.154:23500/ui");
 
-        btnBack = findViewById(R.id.Login);
+        btnBack = findViewById(R.id.btnMenu);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
