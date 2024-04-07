@@ -15,9 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HydroApp"
         tools:targetApi="31">
-        <activity
-            android:name=".WeatherActivity"
-            android:exported="false" />
+
         <activity
             android:name=".AboutActivity"
             android:exported="false" />
