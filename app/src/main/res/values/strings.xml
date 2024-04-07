@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">HydroApp</string>
+    <string name="button_login">Login</string>
+    <string name="button_dashboard">Dashboard</string>
+    <string name="button_weather">Weather</string>
+    <string name="button_about">About Us</string>
+    <string name="button_help">Help</string>
+    <string name="menu_text">"Welcome to the App Menu! Current User:"</string>
 </resources>
