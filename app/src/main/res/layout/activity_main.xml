@@ -35,17 +35,6 @@
         android:foreground="@drawable/logo" />
 
     <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:text="@string/button_login"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:background="@drawable/button_gradient"/>
-
-    <Button
         android:id="@+id/btnDashboard"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
@@ -86,4 +75,18 @@
         android:text="@string/button_help"
         android:textSize="20sp"
         android:background="@drawable/button_gradient"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/button_login"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="@drawable/button_gradient"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"/>
+
 </RelativeLayout>
