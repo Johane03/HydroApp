@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/signuptitle"
-        android:text="Sign Up"
-        android:textSize="35dp"
+        android:text="@string/heading_register"
+        android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:gravity="center"
@@ -25,12 +25,12 @@
         android:id="@+id/username"
         android:layout_below="@id/signuptitle"
         android:background="#30ffffff"
-        android:hint="Username"
+        android:hint="@string/username_hint"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:layout_margin="5dp"
         android:padding="28dp"
-        android:drawableLeft="@drawable/baseline_person_outline_24"
+        android:drawableStart="@drawable/baseline_person_outline_24"
         android:drawablePadding="28dp"
         />
     <EditText
@@ -39,12 +39,12 @@
         android:id="@+id/email"
         android:layout_below="@id/username"
         android:background="#30ffffff"
-        android:hint="Email"
+        android:hint="@string/email_hint"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:layout_margin="5dp"
         android:padding="28dp"
-        android:drawableLeft="@drawable/baseline_email_24"
+        android:drawableStart="@drawable/baseline_email_24"
         android:drawablePadding="28dp"
         />
     <EditText
@@ -53,12 +53,12 @@
         android:id="@+id/password"
         android:layout_below="@id/email"
         android:background="#30ffffff"
-        android:hint="Password"
+        android:hint="@string/password_hint"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:layout_margin="5dp"
         android:padding="28dp"
-        android:drawableLeft="@drawable/baseline_password_24"
+        android:drawableStart="@drawable/baseline_password_24"
         android:drawablePadding="28dp"
         android:inputType="textPassword"
         />
@@ -68,13 +68,13 @@
         android:id="@+id/repassword"
         android:layout_below="@id/password"
         android:background="#30ffffff"
-        android:hint="Confirm Password"
+        android:hint="@string/cpassword_hint"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:layout_margin="5dp"
 
         android:padding="28dp"
-        android:drawableLeft="@drawable/baseline_password_24"
+        android:drawableStart="@drawable/baseline_password_24"
         android:drawablePadding="28dp"
         android:inputType="textPassword"
         />
@@ -83,17 +83,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/signupbtn"
-        android:text="Register"
-        android:textSize="25dp"
+        android:text="@string/button_register"
+        android:textSize="25sp"
         android:layout_below="@id/repassword"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/design_default_color_secondary"
         android:layout_margin="28dp"
+        android:background="@drawable/button_gradient"
 
         />
-
-
-
 
 
 </RelativeLayout>
