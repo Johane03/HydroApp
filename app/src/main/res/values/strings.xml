@@ -1,10 +1,29 @@
 <resources>
     <string name="app_name">HydroApp</string>
+    //Headings
+    <string name="heading_register">Sign Up</string>
+    <string name="heading_signIn">Sign In</string>
+    <string name="heading_weather">Weather</string>
+    <string name="heading_about">About Us</string>
+    <string name="heading_help">Help</string>
+    <string name="heading_dashboard">Dashboard</string>
+    //Buttons
+    <string name="button_register">Register</string>
     <string name="button_login">Login</string>
     <string name="button_dashboard">Dashboard</string>
     <string name="button_weather">Weather</string>
     <string name="button_about">About Us</string>
     <string name="button_help">Help</string>
+    <string name="button_menu">Menu</string>
+    //Text
     <string name="menu_text">"Welcome to the App Menu! Current User:"</string>
     <string name="help_text">""</string>
+    <string name="weather_text">Get</string>
+    //Hints
+    <string name="username_hint">Username</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="cpassword_hint">Confirm Password</string>
+    <string name="city_hint">Enter City Name</string>
+    <string name="countryCode_hint">Enter Country Code (optional)</string>
 </resources>
