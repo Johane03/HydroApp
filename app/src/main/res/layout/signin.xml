@@ -55,6 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_login"
+        android:textColor="@color/white"
         android:textSize="25sp"
         android:layout_below="@id/etPassword"
         android:layout_centerHorizontal="true"
