@@ -19,7 +19,7 @@
         android:gravity="center"
         android:layout_margin="25dp"/>
 
-    <View
+    <ScrollView
         android:id="@+id/vAboutText"
         android:layout_width="350dp"
         android:layout_height="match_parent"
@@ -27,29 +27,108 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="73dp"
         android:background="@drawable/textview_gradient"
-        android:paddingLeft="16dp"
-        android:paddingTop="16dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="16dp"
-        android:alpha="0.4"
-        android:layout_below="@id/tvAbout"/>
+        android:padding="16dp"
+        android:layout_below="@id/tvAbout">
 
-    <TextView
-        android:id="@+id/tvAboutText"
-        android:layout_width="350dp"
-        android:layout_height="248dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="73dp"
-        android:paddingLeft="16dp"
-        android:paddingTop="16dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="16dp"
-        android:text="@string/menu_text"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_below="@id/tvAbout" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAboutProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/about_project"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvProjectText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/project_text"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tvAboutTeam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/about_team"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTeamText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/team_text"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tvAboutStructure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/about_structure"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStructureText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/structure_text"
+                android:textColor="@color/black"
+                android:textSize="25sp"/>
+
+            <ImageView
+                android:id="@+id/ivStructureTop"
+                android:src="@drawable/structure_top"
+                android:layout_width="300dp"
+                android:layout_height="200dp" />
+
+            <ImageView
+                android:id="@+id/ivStructureSide"
+                android:src="@drawable/structure_side"
+                android:layout_width="300dp"
+                android:layout_height="200dp"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivPSULogo"
+                    android:src="@drawable/PSU_logo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:id="@+id/ivBCLogo"
+                    android:src="@drawable/BC_logo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/Login"
