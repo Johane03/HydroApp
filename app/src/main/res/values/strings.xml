@@ -16,6 +16,7 @@
     <string name="button_about">About Us</string>
     <string name="button_help">Help</string>
     <string name="button_menu">Menu</string>
+    <string name="button_redirect">Don’t have an account? Sign up</string>
 
     <!-- Text -->
     <string name="menu_text">"Welcome to the \n App Menu! \n Current User:"</string>
