@@ -15,7 +15,7 @@
         android:text="@string/heading_dashboard"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:gravity="center"
         android:layout_margin="25dp"
         android:background="#50FFFFFF"/>
@@ -25,21 +25,20 @@
         android:layout_width="165dp"
         android:layout_height="47dp"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="668dp" />
+        tools:layout_editor_absoluteY="668dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvDashboard"/>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="368dp"
         android:layout_height="598dp"
-        android:text="Humidity
-        Temperature
-        TDS
-        Water
-        Light
-        Battery"
+        android:text="@string/dashboard_text"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="19dp" />
+        tools:layout_editor_absoluteY="19dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvDashboard"/>
 
     <Button
         android:id="@+id/btnMenu"

@@ -10,13 +10,13 @@
     tools:context=".weather_Main_Activity">
 
     <TextView
-        android:id="@+id/tvAbout"
+        android:id="@+id/tvWeather"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/heading_weather"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:gravity="center"
         android:layout_margin="25dp"
         android:background="#50FFFFFF"/>

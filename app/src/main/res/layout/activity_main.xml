@@ -36,6 +36,7 @@
         android:paddingRight="16dp"
         android:paddingBottom="16dp"
         android:text="@string/menu_text"
+        android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="25sp" />
 
