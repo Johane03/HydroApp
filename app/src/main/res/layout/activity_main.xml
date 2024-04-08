@@ -40,14 +40,6 @@
         android:textAlignment="center"
         android:textSize="25sp" />
 
-    <ImageView
-        android:id="@+id/Logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:foreground="@drawable/logo" />
-
     <Button
         android:id="@+id/btnDashboard"
         android:layout_width="180dp"
