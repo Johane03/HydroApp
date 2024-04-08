@@ -38,7 +38,7 @@ public class SignUpPage extends AppCompatActivity {
 
     private EditText passwordEditText;
     private EditText confirmPasswordEditText;
-    private static final int REQ_ONE_TAP=100;
+   
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +65,7 @@ public class SignUpPage extends AppCompatActivity {
         });
 
 
-        //textView = findViewById(R.id.info);
-        //imageView = findViewById(R.id.google_btn);
+       
 
 
 

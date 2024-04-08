@@ -46,7 +46,7 @@ public class DashboardActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DashboardActivity.this, "Back to login page", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DashboardActivity.this, "Back to main menu", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(DashboardActivity.this, MainActivity.class);
                 startActivity(intent);
             }
