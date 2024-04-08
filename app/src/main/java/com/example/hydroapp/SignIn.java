@@ -56,7 +56,7 @@ public class SignIn extends AppCompatActivity {
         int endColor = getResources().getColor(R.color.gradient_end);
 
         Shader shader = new LinearGradient(
-                0, 0, textView.getTextSize(), 0,
+                0, 0, 0, textView.getTextSize(),
                 startColor, endColor,
                 Shader.TileMode.CLAMP);
 
