@@ -63,7 +63,6 @@ public class DashboardActivity extends AppCompatActivity {
                 startColor, endColor,
                 Shader.TileMode.CLAMP);
 
-        // Apply the gradient shader to the TextView's paint
         textView.getPaint().setShader(shader);
     }
 }
