@@ -17,8 +17,7 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:gravity="center"
-        android:layout_margin="25dp" />
-
+        android:layout_margin="25dp"/>
     <ScrollView
         android:id="@+id/vHelpText"
         android:layout_width="350dp"
@@ -44,8 +43,7 @@
             android:paddingBottom="16dp"
             android:text="@string/help_text"
             android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="25sp" />
 
     </ScrollView>
 

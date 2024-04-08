@@ -35,7 +35,23 @@ public class HelpActivity extends AppCompatActivity {
                 startColor, endColor,
                 Shader.TileMode.CLAMP);
 
-        // Apply the gradient shader to the TextView's paint
         textView.getPaint().setShader(shader);
+
+        /*// Custom Bullet points
+        TextView textView = findViewById(R.id.tvHelpText);
+
+        // Create a SpannableString with bullet points
+        String[] items = {"Item 1", "Item 2", "Item 3"};
+        SpannableString spannableString = new SpannableString("");
+        for (String item : items) {
+            Drawable bullet = getResources().getDrawable(R.drawable.custom_bullet); // Your custom bullet point drawable
+            bullet.setBounds(0, 0, bullet.getIntrinsicWidth(), bullet.getIntrinsicHeight());
+            ImageSpan bulletSpan = new ImageSpan(bullet, ImageSpan.ALIGN_BASELINE);
+            spannableString = new SpannableString(spannableString + "\n" + item);
+            spannableString.setSpan(bulletSpan, spannableString.length() - item.length(), spannableString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+
+        // Set the SpannableString to the TextView
+        textView.setText(spannableString);*/
     }
 }
