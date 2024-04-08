@@ -33,7 +33,7 @@ public class DashboardActivity extends AppCompatActivity {
             return insets;
         });
 
-        //myWeb = findViewById(R.id.myWeb);
+        myWeb = findViewById(R.id.myWeb);
         myWeb.getSettings().setJavaScriptEnabled(true);
 
         myWeb.setVerticalScrollBarEnabled(true);
