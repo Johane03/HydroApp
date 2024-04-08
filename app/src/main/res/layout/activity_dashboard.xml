@@ -19,7 +19,6 @@
         android:gravity="center"
         android:layout_margin="25dp"
         android:background="#50FFFFFF"/>
-
     <WebView
         android:id="@+id/myWeb"
         android:layout_width="165dp"

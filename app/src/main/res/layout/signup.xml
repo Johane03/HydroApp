@@ -16,7 +16,7 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:gravity="center"
-        android:layout_margin="25dp"/>
+        android:layout_margin="25dp" />
 
     <EditText
         android:id="@+id/etUsername"

@@ -15,7 +15,6 @@
         android:text="@string/heading_about"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         android:gravity="center"
         android:layout_margin="25dp"/>
 
