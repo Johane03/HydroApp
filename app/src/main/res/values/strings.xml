@@ -8,6 +8,12 @@
     <string name="heading_help">Help</string>
     <string name="heading_dashboard">Dashboard</string>
 
+    <!-- Sub-Headings -->
+    <string name="about_project">The Project</string>
+    <string name="about_team">Team Hydro</string>
+    <string name="about_structure">Our Structure</string>
+
+
     <!-- Buttons -->
     <string name="button_register">Register</string>
     <string name="button_login">Login</string>
@@ -20,9 +26,12 @@
 
     <!-- Text -->
     <string name="menu_text">"Welcome to the \n App Menu! \n Current User:"</string>
-    <string name="help_text">"If you do not have an account, please register instead of logging in. This function will not work for new users. \n\nThe dashboard will not be accessible without an Internet connection, as well as a connection to the Node-RED server. If the incorrect server information is entered, this may also result in you not being able to access the server. \n\nThe Weather screen depends on your location, so to view all data, you will have to turn your device’s location on for region-specific results. \n\nFor more help/clarity regarding the app, feel free to drop us an email with your query:"</string>
+    <string name="help_text">"If you do not have an account, please register instead of logging in. \nThis function will not work for new users. \n\nThe dashboard will not be accessible without an Internet connection, as well as a connection to the Node-RED server. \nIf the incorrect server information is entered, this may also result in you not being able to access the server. \n\nThe Weather screen depends on your location, so to view all data, you will have to turn your device’s location on for region-specific results. \n\nFor more help/clarity regarding the app, feel free to drop us an email with your query:"</string>
     <string name="weather_text">Get</string>
     <string name="dashboard_text">"Humidity \t\tTemperature \t\tTDS \t\tWater \t\tLight \t\tBattery"</string>
+    <string name="project_text">Two universities joined forces to develop a DIY hydroponics system intended for use by a disadvantaged rural school in Bela-Bela, Limpopo.</string>
+    <string name="team_text">Our team, Team Hydro, took charge of designing the structure, addressing water-related challenges, and developing this mobile application.</string>
+    <string name="structure_text">The hydroponics system comprises a sturdy plastic reservoir positioned at its base. \n\nAbove the reservoir, a framework crafted from white PVC pipes and connectors forms the structure reminiscent of a wick hydroponics system. \n\nAdorning the upper frame are vibrant, multicolored 3D-printed cups, thoughtfully designed to cradle seedlings securely in the nutrient-rich water without risk of overflooding, ensuring optimal distribution of nutrients. \n\nNotably, a valve is strategically attached to one of the horizontal pipes, affording precise control over the flow of water within the system.</string>
 
     <!-- Hints -->
     <string name="username_hint">Username</string>
