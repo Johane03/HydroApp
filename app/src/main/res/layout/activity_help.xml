@@ -19,10 +19,10 @@
         android:gravity="center"
         android:layout_margin="25dp" />
 
-    <TextView
-        android:id="@+id/tvHelpText"
+    <ScrollView
+        android:id="@+id/vHelpText"
         android:layout_width="350dp"
-        android:layout_height="248dp"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="73dp"
@@ -31,10 +31,25 @@
         android:paddingTop="16dp"
         android:paddingRight="16dp"
         android:paddingBottom="16dp"
-        android:text="@string/menu_text"
-        android:textSize="25sp"
         android:alpha="0.4"
-        android:layout_below="@id/tvHelp"/>
+        android:layout_below="@id/tvHelp">
+
+        <TextView
+            android:id="@+id/tvHelpText"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="73dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/help_text"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </ScrollView>
 
     <Button
         android:id="@+id/btnMenu"

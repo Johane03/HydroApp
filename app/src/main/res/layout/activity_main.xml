@@ -8,8 +8,8 @@
     android:background="@drawable/background"
     tools:context=".weather_Main_Activity">
 
-    <TextView
-        android:id="@+id/mainPanel"
+    <View
+        android:id="@+id/vMain"
         android:layout_width="350dp"
         android:layout_height="248dp"
         android:layout_above="@id/btnDashboard"
@@ -21,10 +21,23 @@
         android:paddingTop="16dp"
         android:paddingRight="16dp"
         android:paddingBottom="16dp"
+        android:alpha="0.4"/>
+
+    <TextView
+        android:id="@+id/tvMain"
+        android:layout_width="350dp"
+        android:layout_height="248dp"
+        android:layout_above="@id/btnDashboard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="73dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
         android:text="@string/menu_text"
         android:textAlignment="center"
-        android:textSize="25sp"
-        android:alpha="0.4"/>
+        android:textSize="25sp" />
 
     <ImageView
         android:id="@+id/Logo"
