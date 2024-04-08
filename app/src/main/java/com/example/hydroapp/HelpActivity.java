@@ -1,6 +1,9 @@
 package com.example.hydroapp;
 
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,19 @@ public class HelpActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Text Gradient
+        TextView textView = findViewById(R.id.tvHelp);
+
+        int startColor = getResources().getColor(R.color.gradient_start);
+        int endColor = getResources().getColor(R.color.gradient_end);
+
+        Shader shader = new LinearGradient(
+                0, 0, textView.getTextSize(), 0,
+                startColor, endColor,
+                Shader.TileMode.CLAMP);
+
+        // Apply the gradient shader to the TextView's paint
+        textView.getPaint().setShader(shader);
     }
 }
