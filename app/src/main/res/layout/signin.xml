@@ -7,17 +7,25 @@
     android:background="@drawable/background"
     tools:context=".SignUpPage">
 
+    <ImageView
+        android:id="@+id/ivHidroponix"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="fitCenter"
+        android:layout_margin="20dp"
+        android:src="@drawable/hidroponix_logo" />
+
     <TextView
         android:id="@+id/tvSignIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/heading_signIn"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:gravity="center"
-        android:layout_marginTop="90dp"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/ivHidroponix"/>
 
     <EditText
         android:id="@+id/etUsername"

@@ -7,6 +7,13 @@
     android:background="@drawable/background"
     tools:context=".SignUpPage">
 
+    <ImageView
+        android:id="@+id/ivHidroponix"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hidroponix_logo" />
+
     <TextView
         android:id="@+id/tvSignUp"
         android:layout_width="match_parent"
@@ -16,7 +23,10 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:gravity="center"
-        android:layout_margin="25dp" />
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/ivHidroponix"/>
 
     <EditText
         android:id="@+id/etUsername"
