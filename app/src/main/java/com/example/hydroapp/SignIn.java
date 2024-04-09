@@ -1,11 +1,17 @@
 package com.example.hydroapp;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -51,6 +57,37 @@ public class SignIn extends AppCompatActivity {
         });
 
 
+        TextView textViewLink = findViewById(R.id.tvRedirect);
+
+        // Create a SpannableString
+        SpannableString spannableString = new SpannableString(textViewLink.getText());
+
+        // Define ClickableSpan for "Sign up" text
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(View textViewLink) {
+                // Handle the click event
+                Intent intent = new Intent(SignIn.this, SignUpPage.class);
+                startActivity(intent);
+            }
+        };
+
+
+        spannableString.setSpan(clickableSpan, textViewLink.getText().toString().indexOf("Sign up"),
+                textViewLink.getText().toString().indexOf("Sign up") + "Sign up".length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+
+        applyTextColor(spannableString, getResources().getColor(R.color.gradient_start),
+                textViewLink.getText().toString().indexOf("Sign up"),
+                textViewLink.getText().toString().indexOf("Sign up") + "Sign up".length());
+
+        textViewLink.setText(spannableString);
+
+
+        textViewLink.setMovementMethod(LinkMovementMethod.getInstance());
+
+
 
         // Text Gradient
         TextView textView = findViewById(R.id.tvSignIn);
@@ -64,6 +101,10 @@ public class SignIn extends AppCompatActivity {
                 Shader.TileMode.CLAMP);
 
         textView.getPaint().setShader(shader);
+    }
+
+    private void applyTextColor(Spannable spannable, @ColorInt int color, int start, int end) {
+        spannable.setSpan(new ForegroundColorSpan(color), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
     }
 }
 
