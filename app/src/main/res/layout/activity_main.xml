@@ -47,6 +47,7 @@
         android:layout_centerInParent="true"
         android:text="@string/button_dashboard"
         android:textSize="25sp"
+        android:textColor="@color/white"
         android:background="@drawable/button_gradient"
         app:backgroundTint="@null" />
 
@@ -59,6 +60,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/button_weather"
         android:textSize="25sp"
+        android:textColor="@color/white"
         android:background="@drawable/button_gradient"
         app:backgroundTint="@null" />
 
@@ -71,6 +73,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/button_about"
         android:textSize="25sp"
+        android:textColor="@color/white"
         android:background="@drawable/button_gradient"
         app:backgroundTint="@null" />
 
@@ -83,6 +86,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/button_help"
         android:textSize="25sp"
+        android:textColor="@color/white"
         android:background="@drawable/button_gradient"
         app:backgroundTint="@null" />
 
