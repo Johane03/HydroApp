@@ -25,13 +25,13 @@ public class HelpActivity extends AppCompatActivity {
         });
 
         // Text Gradient
-        TextView textView = findViewById(R.id.tvHelp);
+        TextView textView = findViewById(R.id.tvSignIn);
 
         int startColor = getResources().getColor(R.color.gradient_start);
         int endColor = getResources().getColor(R.color.gradient_end);
 
         Shader shader = new LinearGradient(
-                0, 0, textView.getTextSize(), 0,
+                0, 0, 0, textView.getTextSize(),
                 startColor, endColor,
                 Shader.TileMode.CLAMP);
 

@@ -40,21 +40,13 @@
         android:textAlignment="center"
         android:textSize="25sp" />
 
-    <ImageView
-        android:id="@+id/Logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:foreground="@drawable/logo" />
-
     <Button
         android:id="@+id/btnDashboard"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="@string/button_dashboard"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:background="@drawable/button_gradient"
         app:backgroundTint="@null" />
 
@@ -66,7 +58,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="@string/button_weather"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:background="@drawable/button_gradient"
         app:backgroundTint="@null" />
 
@@ -78,7 +70,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="@string/button_about"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:background="@drawable/button_gradient"
         app:backgroundTint="@null" />
 
@@ -90,7 +82,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="@string/button_help"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:background="@drawable/button_gradient"
         app:backgroundTint="@null" />
 
