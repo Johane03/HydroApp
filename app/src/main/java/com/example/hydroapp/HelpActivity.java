@@ -1,9 +1,13 @@
 package com.example.hydroapp;
 
+import android.content.Intent;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,8 +28,18 @@ public class HelpActivity extends AppCompatActivity {
             return insets;
         });
 
+        Button btnMenu = findViewById(R.id.btnMenu);
+
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(HelpActivity.this, "Back to main menu", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(HelpActivity.this, MainActivity.class));
+            }
+        });
+
         // Text Gradient
-        TextView textView = findViewById(R.id.tvSignIn);
+      /*TextView textView = findViewById(R.id.tvSignIn);
 
         int startColor = getResources().getColor(R.color.gradient_start);
         int endColor = getResources().getColor(R.color.gradient_end);
@@ -35,7 +49,7 @@ public class HelpActivity extends AppCompatActivity {
                 startColor, endColor,
                 Shader.TileMode.CLAMP);
 
-        textView.getPaint().setShader(shader);
+        textView.getPaint().setShader(shader);*/
 
         /*// Custom Bullet points
         TextView textView = findViewById(R.id.tvHelpText);
