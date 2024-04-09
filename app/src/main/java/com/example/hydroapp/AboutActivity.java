@@ -1,9 +1,13 @@
 package com.example.hydroapp;
 
+import android.content.Intent;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,6 +40,16 @@ public class AboutActivity extends AppCompatActivity {
                 Shader.TileMode.CLAMP);
 
         textView.getPaint().setShader(shader);
+
+        Button btnMenu = findViewById(R.id.btnMenu);
+
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(AboutActivity.this, "Back to main menu", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(AboutActivity.this, MainActivity.class));
+            }
+        });
 
     }
 }
