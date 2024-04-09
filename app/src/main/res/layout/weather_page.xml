@@ -72,7 +72,7 @@
         <ScrollView
             android:id="@+id/tvPlate"
             android:layout_width="match_parent"
-            android:layout_height="410dp"
+            android:layout_height="350dp"
             android:background="#54FFFFFF"
             android:layout_margin="5dp"
             android:paddingLeft="16dp"
