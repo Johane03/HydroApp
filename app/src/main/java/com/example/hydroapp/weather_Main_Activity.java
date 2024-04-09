@@ -1,10 +1,12 @@
 package com.example.hydroapp;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -62,6 +64,16 @@ public class weather_Main_Activity extends AppCompatActivity {
                 Shader.TileMode.CLAMP);
 
         textView.getPaint().setShader(shader);
+
+        Button btnMenu = findViewById(R.id.btnMenu);
+
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(weather_Main_Activity.this, "Back to main menu", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(weather_Main_Activity.this, MainActivity.class));
+            }
+        });
     }
 
     public void getWeatherDetails(View view) {
