@@ -32,7 +32,7 @@ public class weather_Main_Activity extends AppCompatActivity {
 
     EditText etCity, etCountry;
     TextView tvResult;
-    private final String url="http://api.openweathermap.org/data/2.5/weather";
+    private final String url="https://api.openweathermap.org/data/2.5/weather";
     private final String appid="6c5b98c31fb961f18b0c8f973f1b5df5";
     DecimalFormat df = new DecimalFormat("#.##");
 
