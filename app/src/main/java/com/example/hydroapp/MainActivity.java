@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Button weather = findViewById(R.id.btnWeather);
         Button about = findViewById(R.id.btnAboutUs);
         Button help = findViewById(R.id.btnHelp);
+        Button btnLogin = findViewById(R.id.btnLogin);
 
         dashboardButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +59,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivity(new Intent(MainActivity.this, HelpActivity.class));
+            }
+        });
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(MainActivity.this, SignIn.class));
             }
         });
     }

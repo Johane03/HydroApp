@@ -7,6 +7,7 @@ import android.graphics.LinearGradient;
 import android.graphics.Shader;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,6 +49,8 @@ public class SignIn extends AppCompatActivity {
                 }
             }
         });
+
+
 
         // Text Gradient
         TextView textView = findViewById(R.id.tvSignIn);
