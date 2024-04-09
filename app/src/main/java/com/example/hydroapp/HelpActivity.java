@@ -28,6 +28,19 @@ public class HelpActivity extends AppCompatActivity {
             return insets;
         });
 
+        // Text Gradient
+        TextView textView = findViewById(R.id.tvHelp);
+
+        int startColor = getResources().getColor(R.color.gradient_start);
+        int endColor = getResources().getColor(R.color.gradient_end);
+
+        Shader shader = new LinearGradient(
+                0, 0, 0, textView.getTextSize(),
+                startColor, endColor,
+                Shader.TileMode.CLAMP);
+
+        textView.getPaint().setShader(shader);
+
         Button btnMenu = findViewById(R.id.btnMenu);
 
         btnMenu.setOnClickListener(new View.OnClickListener() {
