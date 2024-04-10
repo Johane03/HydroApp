@@ -25,7 +25,9 @@
     <string name="button_redirect">Don’t have an account? Sign up</string>
 
     <!-- Text -->
-    <string name="menu_text">"Welcome to the \n App Menu! \n Current User:"</string>
+    <string name="welcome_text">Welcome to the</string>
+    <string name="app_text">App Menu!</string>
+    <string name="user_text">Current User:</string>
     <string name="help_text">"If you do not have an account, please register instead of logging in. \nThis function will not work for new users. \n\nThe dashboard will not be accessible without an Internet connection, as well as a connection to the Node-RED server. \nIf the incorrect server information is entered, this may also result in you not being able to access the server. \n\nThe Weather screen depends on your location, so to view all data, you will have to turn your device’s location on for region-specific results. \n\nFor more help/clarity regarding the app, feel free to drop us an email with your query."</string>
     <string name="weather_text">Get</string>
     <string name="dashboard_text">"Humidity \t\tTemperature \t\tTDS \t\tWater \t\tLight \t\tBattery"</string>
