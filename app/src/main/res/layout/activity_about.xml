@@ -46,15 +46,6 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvTeamText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="@string/team_text"
-                android:textColor="@color/black"
-                android:textSize="25sp" />
-
-            <TextView
                 android:id="@+id/tvProjectText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,6 +63,15 @@
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTeamText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/team_text"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/tvAboutStructure"
