@@ -157,21 +157,24 @@
             android:src="@drawable/hydro_flag"
             android:layout_width="100dp"
             android:layout_height="55dp"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:visibility="gone"/>
 
         <ImageView
             android:id="@+id/ivElectroFlag"
             android:src="@drawable/electro_flag"
             android:layout_width="100dp"
             android:layout_height="55dp"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:visibility="gone"/>
 
         <ImageView
             android:id="@+id/ivPhotonFlag"
             android:src="@drawable/photon_flag"
             android:layout_width="100dp"
             android:layout_height="55dp"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:visibility="gone"/>
 
     </LinearLayout>
 
