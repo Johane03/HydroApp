@@ -6,8 +6,10 @@ import android.graphics.Shader;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.os.Handler;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,6 +50,41 @@ public class AboutActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(AboutActivity.this, "Back to main menu", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(AboutActivity.this, MainActivity.class));
+            }
+        });
+
+        ImageView ivHydroFlag = findViewById(R.id.ivHydroFlag);
+        ImageView ivElectroFlag = findViewById(R.id.ivElectroFlag);
+        ImageView ivPhotonFlag = findViewById(R.id.ivPhotonFlag);
+        Button btnFlags = findViewById(R.id.btnFlags);
+
+        btnFlags.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Make images visible
+                ivHydroFlag.setVisibility(View.VISIBLE);
+                ivElectroFlag.setVisibility(View.VISIBLE);
+                ivPhotonFlag.setVisibility(View.VISIBLE);
+
+                // Make buttons invisible
+                btnMenu.setVisibility(View.GONE);
+                btnFlags.setVisibility(View.GONE);
+
+                // Delayed runnable to hide images after 3 seconds
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Hide images
+                        ivHydroFlag.setVisibility(View.GONE);
+                        ivElectroFlag.setVisibility(View.GONE);
+                        ivPhotonFlag.setVisibility(View.GONE);
+
+                        // Show buttons
+                        btnMenu.setVisibility(View.VISIBLE);
+                        btnFlags.setVisibility(View.VISIBLE);
+                    }
+                }, 3000); // 3000 milliseconds = 3 seconds
             }
         });
 

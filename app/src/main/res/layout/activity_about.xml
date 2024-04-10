@@ -95,13 +95,13 @@
             <ImageView
                 android:id="@+id/ivStructureTop"
                 android:src="@drawable/structure_top"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="200dp" />
 
             <ImageView
                 android:id="@+id/ivStructureSide"
                 android:src="@drawable/structure_side"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="200dp"/>
 
 
@@ -129,6 +129,51 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/btnFlags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_flags"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_gradient"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        app:backgroundTint="@null"/>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/ivHydroFlag"
+            android:src="@drawable/hydro_flag"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/ivElectroFlag"
+            android:src="@drawable/electro_flag"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/ivPhotonFlag"
+            android:src="@drawable/photon_flag"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnMenu"
