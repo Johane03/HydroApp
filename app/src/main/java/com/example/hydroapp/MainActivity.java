@@ -10,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat;
 import android.widget.Button;
 import android.content.Intent;
 import android.view.View;
+import android.widget.TextView;
+import com.example.hydroapp.User;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Displaying User
+        // Retrieve username from Intent extras
+        String username = getIntent().getStringExtra("username");
+
+        // Set the retrieved username to the TextView
+        TextView usernameTextView = findViewById(R.id.tvMainDisplay);
+        usernameTextView.setText(username);
 
         Button dashboardButton = findViewById(R.id.btnDashboard);
         Button weather = findViewById(R.id.btnWeather);

@@ -46,7 +46,9 @@ public class SignIn extends AppCompatActivity {
                     // User exists, proceed with sign-in logic
                     Toast.makeText(SignIn.this, "Sign in successful! Username: "+user.getUsername(), Toast.LENGTH_SHORT).show();
                     // Navigate to Main activity
+                    // Navigate to Main activity and pass the username as an extra
                     Intent intent = new Intent(SignIn.this, MainActivity.class);
+                    intent.putExtra("username", user.getUsername());
                     startActivity(intent);
                     finish(); // Optional: Finish MainActivity so it doesn't appear in the back stack
                 } else {
@@ -86,7 +88,6 @@ public class SignIn extends AppCompatActivity {
 
 
         textViewLink.setMovementMethod(LinkMovementMethod.getInstance());
-
 
 
         // Text Gradient
