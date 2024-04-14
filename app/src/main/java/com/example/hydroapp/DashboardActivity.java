@@ -38,6 +38,8 @@ public class DashboardActivity extends AppCompatActivity {
         btnWeb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(DashboardActivity.this, "Opening NodeRed dashboard...", Toast.LENGTH_SHORT).show();
+
                 myWeb = findViewById(R.id.myWeb);
                 myWeb.getSettings().setJavaScriptEnabled(true);
 
