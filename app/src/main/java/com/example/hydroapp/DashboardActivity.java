@@ -33,7 +33,7 @@ public class DashboardActivity extends AppCompatActivity {
             return insets;
         });
 
-        //navigate to the NodeRed dashboard- WebChromeClient opens a new tab in Chrome
+        //navigate to the NodeRed dashboard- opens a new tab in Chrome
         btnWeb = findViewById(R.id.btnWebDash);
         btnWeb.setOnClickListener(new View.OnClickListener() {
             @Override

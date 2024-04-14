@@ -53,10 +53,10 @@
 
     <Button
         android:id="@+id/btnWebDash"
-        android:layout_width="161dp"
+        android:layout_width="172dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="131dp"
+        android:layout_marginEnd="120dp"
         android:layout_marginBottom="8dp"
         android:layout_toStartOf="@+id/btnMenu"
         android:background="@drawable/button_gradient"
