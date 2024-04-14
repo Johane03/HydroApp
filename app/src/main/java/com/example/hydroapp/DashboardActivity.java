@@ -20,7 +20,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class DashboardActivity extends AppCompatActivity {
 
     WebView myWeb;
-    Button btnBack;
+    Button btnBack, btnWeb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,15 +33,23 @@ public class DashboardActivity extends AppCompatActivity {
             return insets;
         });
 
-        myWeb = findViewById(R.id.myWeb);
-        myWeb.getSettings().setJavaScriptEnabled(true);
+        //navigate to the NodeRed dashboard- WebChromeClient opens a new tab in Chrome
+        btnWeb = findViewById(R.id.btnWebDash);
+        btnWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myWeb = findViewById(R.id.myWeb);
+                myWeb.getSettings().setJavaScriptEnabled(true);
 
-        myWeb.setVerticalScrollBarEnabled(true);
-        myWeb.setHorizontalScrollBarEnabled(true);
+                myWeb.setVerticalScrollBarEnabled(true);
+                myWeb.setHorizontalScrollBarEnabled(true);
 
-        myWeb.setWebChromeClient(new WebChromeClient());
-        myWeb.loadUrl("http://41.193.5.154:23500/ui");
+                myWeb.setWebChromeClient(new WebChromeClient());
+                myWeb.loadUrl("http://41.193.5.154:23500/ui");
+            }
+        });
 
+        //redirect user back to the menu screen
         btnBack = findViewById(R.id.btnMenu);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +62,9 @@ public class DashboardActivity extends AppCompatActivity {
 
         // Text Gradient
         TextView textView = findViewById(R.id.tvDashboard);
+
+        textView.setText("Humidity: The measure of moisture within a vicinity- indicated by " +
+                "percentage (%)\nTemperature: Average temp. of the area where the system is placed.");
 
         int startColor = getResources().getColor(R.color.gradient_start);
         int endColor = getResources().getColor(R.color.gradient_end);
