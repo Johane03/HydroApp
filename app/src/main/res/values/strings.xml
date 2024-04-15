@@ -38,7 +38,7 @@
     <string name="team_text">Our team, Team Hydro, took charge of designing the structure, addressing water-related challenges, and developing this mobile application.</string>
     <string name="structure_text">The hydroponics system comprises a sturdy plastic reservoir positioned at its base. \n\nAbove the reservoir, a framework crafted from white PVC pipes and connectors forms the structure reminiscent of a wick hydroponics system. \n\nAdorning the upper frame are vibrant, multicolored 3D-printed cups, thoughtfully designed to cradle seedlings securely in the nutrient-rich water without risk of overflooding, ensuring optimal distribution of nutrients. \n\nNotably, a valve is strategically attached to one of the horizontal pipes, affording precise control over the flow of water within the system.</string>
     <string name="temp_text">Average temperature of the area where the system is placed.</string>
-    <string name="humidity_text">The measure of moisture within a vicinity- indicated by percentage (%)</string>
+    <string name="humidity_text">The measure of moisture within a vicinity; indicated by percentage (%)</string>
 
     <!-- Hints -->
     <string name="username_hint">Username</string>
