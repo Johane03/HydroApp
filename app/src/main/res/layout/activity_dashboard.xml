@@ -73,15 +73,16 @@
 
     <Button
         android:id="@+id/btnWebDash"
-        android:layout_width="172dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="120dp"
-        android:layout_marginBottom="8dp"
-        android:layout_toStartOf="@+id/btnMenu"
-        android:background="@drawable/button_gradient"
-        android:backgroundTint="@null"
         android:text="@string/viewDashboard"
-        android:textSize="14sp" />
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_gradient"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        app:backgroundTint="@null"/>
 
 </RelativeLayout>
