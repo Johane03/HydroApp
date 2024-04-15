@@ -18,24 +18,44 @@
         android:textColor="@color/black"
         android:gravity="center"
         android:layout_margin="25dp" />
+
     <WebView
         android:id="@+id/myWeb"
         android:layout_width="165dp"
         android:layout_height="47dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="86dp"
+        android:layout_marginBottom="32dp"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="668dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/tvDashboard"/>
+        tools:layout_editor_absoluteY="668dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="371dp"
-        android:layout_height="549dp"
-        android:layout_below="@id/tvDashboard"
-        android:layout_centerHorizontal="true"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="19dp" />
+    <ScrollView
+        android:layout_width="313dp"
+        android:layout_height="501dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="111dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvDashInfo"
+                android:layout_width="match_parent"
+                android:layout_height="483dp"
+                android:layout_below="@id/tvDashboard"
+                android:layout_centerHorizontal="true"
+                android:text="@string/DashboardInfo"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="19dp"
+                tools:layout_editor_absoluteY="19dp" />
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/btnMenu"

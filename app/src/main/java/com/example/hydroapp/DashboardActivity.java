@@ -65,9 +65,6 @@ public class DashboardActivity extends AppCompatActivity {
         // Text Gradient
         TextView textView = findViewById(R.id.tvDashboard);
 
-        textView.setText("Humidity: The measure of moisture within a vicinity- indicated by " +
-                "percentage (%)\nTemperature: Average temp. of the area where the system is placed.");
-
         int startColor = getResources().getColor(R.color.gradient_start);
         int endColor = getResources().getColor(R.color.gradient_end);
 

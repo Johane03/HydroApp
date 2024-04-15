@@ -44,4 +44,5 @@
     <string name="city_hint">Enter City Name</string>
     <string name="countryCode_hint">Enter Country Code (optional)</string>
     <string name="viewDashboard">View Dashboard</string>
+    <string name="DashboardInfo">Humidity: The measure of moisture within a vicinity- indicated by \npercentage (%)\nTemperature: Average temp. of the area where the system is placed.</string>
 </resources>
