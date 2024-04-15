@@ -32,28 +32,59 @@
         tools:layout_editor_absoluteY="668dp" />
 
     <ScrollView
-        android:layout_width="313dp"
-        android:layout_height="501dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="111dp">
+        android:id="@+id/vAboutText"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="73dp"
+        android:background="@drawable/textview_gradient"
+        android:padding="16dp"
+        android:layout_below="@id/tvDashboard">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvDashInfo"
+                android:id="@+id/tvDashboardTemp"
                 android:layout_width="match_parent"
-                android:layout_height="483dp"
-                android:layout_below="@id/tvDashboard"
-                android:layout_centerHorizontal="true"
-                android:text="@string/DashboardInfo"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/dashboard_temp"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTempText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/temp_text"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                tools:layout_editor_absoluteX="19dp"
-                tools:layout_editor_absoluteY="19dp" />
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tvDashboardHumidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/dashboard_humidity"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvHumidityText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/humidity_text"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -75,7 +106,7 @@
         android:id="@+id/btnWebDash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/viewDashboard"
+        android:text="@string/button_view"
         android:textSize="20sp"
         android:textColor="@color/white"
         android:layout_alignParentStart="true"
