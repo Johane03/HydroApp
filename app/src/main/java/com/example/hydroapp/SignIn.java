@@ -72,7 +72,7 @@ public class SignIn extends AppCompatActivity {
                     NotificationCompat.Builder builder = new NotificationCompat.Builder(SignIn.this, "My notification");
                     builder.setContentTitle("New User");
                     builder.setContentText("New sign-in detected by " + user.getUsername());
-                    builder.setSmallIcon(R.drawable.ic_launcher_background);
+                    builder.setSmallIcon(R.mipmap.ic_launcher);
                     builder.setAutoCancel(true);
                     builder.setDefaults(~Notification.DEFAULT_SOUND);
 
