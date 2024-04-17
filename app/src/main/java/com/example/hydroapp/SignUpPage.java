@@ -25,6 +25,7 @@ import android.text.TextWatcher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 
 import com.google.android.material.button.MaterialButton;
@@ -39,14 +40,13 @@ public class SignUpPage extends AppCompatActivity {
 
     private EditText passwordEditText;
     private EditText confirmPasswordEditText;
-   
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.signup);
-
-
 
         passwordEditText = findViewById(R.id.etPassword);
         confirmPasswordEditText = findViewById(R.id.etConfirmPassword);
@@ -64,11 +64,6 @@ public class SignUpPage extends AppCompatActivity {
                 comparePasswords();
             }
         });
-
-
-       
-
-
 
 
         dbHelper = new DatabaseHelper(this);
