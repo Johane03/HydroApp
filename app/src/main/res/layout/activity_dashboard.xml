@@ -27,6 +27,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="86dp"
         android:layout_marginBottom="32dp"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="668dp" />
 
