@@ -67,21 +67,40 @@
                 android:textSize="25sp" />
 
             <TextView
-                android:id="@+id/tvDashboardHumidity"
+                android:id="@+id/tvDashboardTDSSensor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="@string/dashboard_humidity"
+                android:text="@string/dashboard_tds"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvHumidityText"
+                android:id="@+id/tvTDSText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="@string/humidity_text"
+                android:text="@string/tds_sensor_text"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tvDashboardWaterLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/dashboard_water_level"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWaterLevelText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/water_level_text"
                 android:textColor="@color/black"
                 android:textSize="25sp" />
 

@@ -13,7 +13,8 @@
     <string name="about_team">Team Hydro</string>
     <string name="about_structure">Our Structure</string>
     <string name="dashboard_temp">Temperature:</string>
-    <string name="dashboard_humidity">Humidity:</string>
+    <string name="dashboard_tds">TDS Sensor:</string>
+    <string name="dashboard_water_level">Water Level:</string>
 
     <!-- Buttons -->
     <string name="button_register">Register</string>
@@ -37,8 +38,9 @@
     <string name="project_text">Two universities joined forces to develop a DIY hydroponics system intended for use by a disadvantaged rural school in Bela-Bela, Limpopo.</string>
     <string name="team_text">Our team, Team Hydro, took charge of designing the structure, addressing water-related challenges, and developing this mobile application.</string>
     <string name="structure_text">The hydroponics system comprises a sturdy plastic reservoir positioned at its base. \n\nAbove the reservoir, a framework crafted from white PVC pipes and connectors forms the structure reminiscent of a wick hydroponics system. \n\nAdorning the upper frame are vibrant, multicolored 3D-printed cups, thoughtfully designed to cradle seedlings securely in the nutrient-rich water without risk of overflooding, ensuring optimal distribution of nutrients. \n\nNotably, a valve is strategically attached to one of the horizontal pipes, affording precise control over the flow of water within the system.</string>
-    <string name="temp_text">Average temperature of the area where the system is placed.</string>
-    <string name="humidity_text">The measure of moisture within a vicinity; indicated by percentage (%)</string>
+    <string name="temp_text">The temperature of the area where the system is placed. The system must remain at an optimal temperature to promote plant growth and to avoid damage.</string>
+    <string name="tds_sensor_text">TDS (Total Dissolved Solids) is the measure of water quality. This is determined by the amount of nutrients that have dissolved into the water, and is represented by the conductivity of the solution.</string>
+    <string name="water_level_text">This is a direct indication of the amount of milliliters (ml) of water that are actively in the system. This is crucial, since it is an indicator of when to refill the system, or when it may be overflowing.</string>
 
     <!-- Hints -->
     <string name="username_hint">Username</string>
