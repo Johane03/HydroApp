@@ -47,7 +47,7 @@ public class DashboardActivity extends AppCompatActivity {
                 myWeb.setHorizontalScrollBarEnabled(true);
 
                 myWeb.setWebChromeClient(new WebChromeClient());
-                myWeb.loadUrl("https://www.youtube.com");
+                myWeb.loadUrl("http://41.193.5.154:23500/ui");
                 //"http://41.193.5.154:23500/ui" link to NodeRed
             }
         });
