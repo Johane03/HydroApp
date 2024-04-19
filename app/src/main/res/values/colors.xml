@@ -2,9 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="text_colour">#002B4B</color>
+    <color name="tv_background">#80000000</color>
     <!-- Heading Gradient -->
     <color name="gradient_start">#0064B1</color>
     <color name="gradient_end">#19C571</color>
-    <color name="text_colour">#002B4B</color>
-    <color name="tv">#80000000</color>
 </resources>
