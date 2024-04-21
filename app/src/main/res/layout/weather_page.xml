@@ -73,8 +73,9 @@
             android:id="@+id/tvPlate"
             android:layout_width="match_parent"
             android:layout_height="350dp"
-            android:background="@color/tv"
+
             android:layout_margin="5dp"
+            android:background="#BEFFFFFF"
             android:paddingLeft="16dp"
             android:paddingTop="16dp"
             android:paddingRight="16dp"
@@ -84,9 +85,9 @@
                 android:id="@+id/tvResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:textColor="@color/white"
-                android:textSize="25sp"
-                android:layout_margin="5dp"/>
+                android:textSize="25sp" />
 
         </ScrollView>
     </LinearLayout>
