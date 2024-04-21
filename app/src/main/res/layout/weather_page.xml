@@ -73,9 +73,8 @@
             android:id="@+id/tvPlate"
             android:layout_width="match_parent"
             android:layout_height="350dp"
-
             android:layout_margin="5dp"
-            android:background="#BEFFFFFF"
+            android:background="@color/tv_background"
             android:paddingLeft="16dp"
             android:paddingTop="16dp"
             android:paddingRight="16dp"
