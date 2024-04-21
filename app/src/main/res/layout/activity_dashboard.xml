@@ -55,7 +55,11 @@
                 android:text="@string/dashboard_temp"
                 android:textColor="@color/white"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:shadowColor="@color/gradient_end"
+                android:shadowDx="10"
+                android:shadowDy="10"
+                android:shadowRadius="1.6"/>
 
             <TextView
                 android:id="@+id/tvTempText"
@@ -74,7 +78,11 @@
                 android:text="@string/dashboard_tds"
                 android:textColor="@color/white"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:shadowColor="@color/gradient_end"
+                android:shadowDx="10"
+                android:shadowDy="10"
+                android:shadowRadius="1.6"/>
 
             <TextView
                 android:id="@+id/tvTDSText"
@@ -93,7 +101,11 @@
                 android:text="@string/dashboard_water_level"
                 android:textColor="@color/white"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:shadowColor="@color/gradient_end"
+                android:shadowDx="10"
+                android:shadowDy="10"
+                android:shadowRadius="1.6"/>
 
             <TextView
                 android:id="@+id/tvWaterLevelText"
