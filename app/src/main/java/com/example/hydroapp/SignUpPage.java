@@ -70,7 +70,7 @@ public class SignUpPage extends AppCompatActivity {
 
         EditText username = findViewById(R.id.etUsername);
         EditText email = findViewById(R.id.etEmail);
-        EditText password = findViewById(R.id.etPassword);
+
 
         MaterialButton regbtn = findViewById(R.id.btnRegister);
 
@@ -79,7 +79,7 @@ public class SignUpPage extends AppCompatActivity {
             public void onClick(View v) {
                 String usernameText = username.getText().toString();
                 String emailText = email.getText().toString();
-                String passwordText = password.getText().toString();
+                String passwordText = passwordEditText.getText().toString();
 
                 if (!usernameText.isEmpty() && !emailText.isEmpty() && !passwordText.isEmpty()) {
                     saveUser(usernameText, emailText, passwordText);
@@ -147,20 +147,19 @@ public class SignUpPage extends AppCompatActivity {
         String password = passwordEditText.getText().toString();
         String confirmPassword = confirmPasswordEditText.getText().toString();
 
-        if (!password.equals(confirmPassword)) {
-            // Passwords don't match, set red background color to confirm password field
-            confirmPasswordEditText.setBackgroundColor(Color.RED);
-            changeDrawableLeft(confirmPasswordEditText, R.drawable.baseline_warning_incorrect);
-
-        } else {
-            // Passwords match, set default background color to confirm password field
-            confirmPasswordEditText.setBackgroundColor(Color.GREEN);
-            changeDrawableLeft(confirmPasswordEditText, R.drawable.baseline_check_24);
+        if (!password.isEmpty() && !confirmPassword.isEmpty()) {
+            if (!password.equals(confirmPassword)) {
+                // Passwords don't match, set red background color to confirm password field
+                confirmPasswordEditText.setBackgroundColor(Color.RED);
+                changeDrawableLeft(confirmPasswordEditText, R.drawable.baseline_warning_incorrect);
+            } else {
+                // Passwords match, set default background color to confirm password field
+                confirmPasswordEditText.setBackgroundColor(Color.GREEN);
+                changeDrawableLeft(confirmPasswordEditText, R.drawable.baseline_check_24);
+            }
         }
-
-
-
     }
+
 
     private void changeDrawableLeft(EditText editText, int drawableResId) {
         // Get the drawable from resources
