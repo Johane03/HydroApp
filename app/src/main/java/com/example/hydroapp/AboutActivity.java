@@ -5,6 +5,8 @@ import android.graphics.LinearGradient;
 import android.graphics.Shader;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -66,6 +68,12 @@ public class AboutActivity extends AppCompatActivity {
                 ivElectroFlag.setVisibility(View.VISIBLE);
                 ivPhotonFlag.setVisibility(View.VISIBLE);
 
+                // Start fadein animation for images
+                Animation fadeInAnimation = AnimationUtils.loadAnimation(AboutActivity.this, R.anim.fadein);
+                ivHydroFlag.startAnimation(fadeInAnimation);
+                ivElectroFlag.startAnimation(fadeInAnimation);
+                ivPhotonFlag.startAnimation(fadeInAnimation);
+
                 // Make buttons invisible
                 btnMenu.setVisibility(View.GONE);
                 btnFlags.setVisibility(View.GONE);
@@ -84,7 +92,7 @@ public class AboutActivity extends AppCompatActivity {
                         btnMenu.setVisibility(View.VISIBLE);
                         btnFlags.setVisibility(View.VISIBLE);
                     }
-                }, 3000); // 3000 milliseconds = 3 seconds
+                }, 5000); // 5000 milliseconds = 5 seconds
             }
         });
 
