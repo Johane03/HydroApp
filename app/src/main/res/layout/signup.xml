@@ -2,10 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".SignUpPage">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/ivHidroponix"
@@ -18,7 +19,7 @@
         android:id="@+id/tvSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/heading_register"
+        android:text="Sign Up"
         android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -37,10 +38,10 @@
         android:background="@drawable/textview_gradient"
         android:drawableStart="@drawable/baseline_person_outline_24"
         android:drawablePadding="28dp"
-        android:hint="@string/username_hint"
+        android:hint="Username"
         android:padding="28dp"
-        android:textColor="@color/text_colour"
-        android:textColorHint="@color/text_colour" />
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -48,52 +49,93 @@
         android:layout_height="80dp"
         android:layout_below="@id/etUsername"
         android:background="@drawable/textview_gradient"
-        android:hint="@string/email_hint"
-        android:textColorHint="@color/text_colour"
-        android:textColor="@color/text_colour"
+        android:hint="Email"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:layout_margin="5dp"
         android:padding="28dp"
         android:drawableStart="@drawable/baseline_email_24"
         android:drawablePadding="28dp" />
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_below="@id/etEmail"
-        android:background="@drawable/textview_gradient"
-        android:hint="@string/password_hint"
-        android:textColorHint="@color/text_colour"
-        android:textColor="@color/text_colour"
-        android:layout_margin="5dp"
-        android:padding="28dp"
-        android:drawableStart="@drawable/baseline_password_24"
-        android:drawablePadding="28dp"
-        android:inputType="textPassword" />
-
-    <EditText
-        android:id="@+id/etConfirmPassword"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_below="@id/etPassword"
-        android:background="@drawable/textview_gradient"
-        android:hint="@string/cpassword_hint"
-        android:textColorHint="@color/text_colour"
-        android:textColor="@color/text_colour"
+        app:passwordToggleEnabled="true"
+        android:id="@+id/passwordTextInputLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
         android:layout_margin="5dp"
-        android:padding="28dp"
-        android:drawableStart="@drawable/baseline_password_24"
-        android:drawablePadding="28dp"
-        android:inputType="textPassword" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_below="@id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:ems="15"
+            android:background="@drawable/textview_gradient"
+
+
+
+            android:padding="28dp"
+            android:drawableStart="@drawable/baseline_password_24"
+            android:drawablePadding="28dp"
+            android:textColorHint="@color/white"
+            android:hint="Enter Password "
+
+            />
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@id/passwordTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:passwordToggleEnabled="true"
+        android:id="@+id/confirmPasswordTextInputLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etConfirmPassword"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:ems="15"
+            android:background="@drawable/textview_gradient"
+            android:layout_margin="5dp"
+            android:padding="28dp"
+            android:drawableStart="@drawable/baseline_password_24"
+            android:drawablePadding="28dp"
+            android:textColorHint="@color/white"
+            android:hint="Confirm Password"
+
+            />
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_register"
+        android:text="Register"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:layout_below="@id/etConfirmPassword"
+        android:layout_below="@id/confirmPasswordTextInputLayout"
         android:layout_centerHorizontal="true"
         android:layout_margin="28dp"
         android:background="@drawable/button_gradient"
@@ -105,12 +147,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:text="@string/button_login"
+        android:text="Log In "
         android:textColor="@color/white"
         android:textSize="20sp"
         android:background="@drawable/button_gradient"
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="10dp"
         app:backgroundTint="@null" />
+
+
 
 </RelativeLayout>

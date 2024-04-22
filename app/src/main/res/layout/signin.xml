@@ -35,7 +35,7 @@
         android:layout_below="@id/tvSignIn"
         android:background="@drawable/textview_gradient"
         android:hint="@string/username_hint"
-        android:textColorHint="@color/text_colour"
+        android:textColorHint="@color/white"
         android:textColor="@color/text_colour"
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
@@ -45,20 +45,39 @@
         android:drawableStart="@drawable/baseline_person_outline_24"
         android:drawablePadding="28dp" />
 
-    <EditText
-        android:id="@+id/etPassword"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_below="@id/etUsername"
-        android:background="@drawable/textview_gradient"
-        android:hint="@string/password_hint"
-        android:textColorHint="@color/text_colour"
-        android:textColor="@color/text_colour"
-        android:layout_margin="5dp"
-        android:padding="28dp"
-        android:drawableStart="@drawable/baseline_password_24"
-        android:drawablePadding="28dp"
-        android:inputType="textPassword" />
+        app:passwordToggleEnabled="true"
+        android:id="@+id/passwordTextInputLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_below="@id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:ems="15"
+            android:background="@drawable/textview_gradient"
+            android:layout_margin="5dp"
+            android:padding="28dp"
+            android:drawableStart="@drawable/baseline_password_24"
+            android:drawablePadding="28dp"
+            android:textColorHint="@color/white"
+            android:hint="Enter Password "
+
+            />
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
@@ -67,7 +86,7 @@
         android:text="@string/button_login"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:layout_below="@id/etPassword"
+        android:layout_below="@id/passwordTextInputLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
         android:background="@drawable/button_gradient"
