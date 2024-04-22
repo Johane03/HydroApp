@@ -45,7 +45,7 @@
     <!-- Hints -->
     <string name="username_hint">Username</string>
     <string name="email_hint">Email</string>
-    <string name="password_hint">Password</string>
+    <string name="password_hint">Enter Password</string>
     <string name="cpassword_hint">Confirm Password</string>
     <string name="city_hint">Enter City Name</string>
     <string name="countryCode_hint">Enter Country Code (optional)</string>
