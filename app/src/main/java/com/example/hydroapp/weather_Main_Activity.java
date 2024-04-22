@@ -4,7 +4,11 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.StyleSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -110,7 +114,7 @@ public class weather_Main_Activity extends AppCompatActivity {
                         JSONObject jsonObjectSys = jsonResponse.getJSONObject("sys");
                         String countryName = jsonObjectSys.getString("country");
                         String cityName = jsonResponse.getString("name");
-                        tvResult.setTextColor(Color.rgb(0,0,0));
+                        tvResult.setTextColor(Color.WHITE);
 
                         output += "Current weather of " + cityName + " (" + countryName + ")"
                                 + "\n Temp: " + df.format(temp) + " °C"
@@ -121,6 +125,23 @@ public class weather_Main_Activity extends AppCompatActivity {
                                 + "\n Cloudiness: " + clouds + "%"
                                 + "\n Pressure: " + pressure + "hPa";
                         tvResult.setText(output);
+
+                        // Create a SpannableString
+                        SpannableString spannableString = new SpannableString(output);
+
+                        // Making certain parts of the text bold
+                        spannableString.setSpan(new StyleSpan(Typeface.BOLD), output.indexOf("Current weather of "), output.indexOf("Current weather of ") + "Current weather of ".length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        spannableString.setSpan(new StyleSpan(Typeface.BOLD), output.indexOf("Temp:"), output.indexOf("Temp:") + "Temp:".length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        spannableString.setSpan(new StyleSpan(Typeface.BOLD), output.indexOf("Feels Like:"), output.indexOf("Feels Like:") + "Feels Like:".length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        spannableString.setSpan(new StyleSpan(Typeface.BOLD), output.indexOf("Humidity:"), output.indexOf("Humidity:") + "Humidity:".length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        spannableString.setSpan(new StyleSpan(Typeface.BOLD), output.indexOf("Description:"), output.indexOf("Description:") + "Description:".length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        spannableString.setSpan(new StyleSpan(Typeface.BOLD), output.indexOf("Wind Speed:"), output.indexOf("Wind Speed:") + "Wind Speed:".length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        spannableString.setSpan(new StyleSpan(Typeface.BOLD), output.indexOf("Cloudiness:"), output.indexOf("Cloudiness:") + "Cloudiness:".length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        spannableString.setSpan(new StyleSpan(Typeface.BOLD), output.indexOf("Pressure:"), output.indexOf("Pressure:") + "Pressure:".length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                        // Set the modified SpannableString as the text of the TextView
+                        tvResult.setText(spannableString);
+
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
