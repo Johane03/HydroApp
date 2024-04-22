@@ -10,6 +10,7 @@ import android.graphics.LinearGradient;
 import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,13 +23,17 @@ import android.graphics.Color;
 import android.text.Editable;
 import android.text.TextWatcher;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
+
+
+import android.view.MotionEvent;
+
 
 public class SignUpPage extends AppCompatActivity {
 
@@ -42,6 +47,10 @@ public class SignUpPage extends AppCompatActivity {
     private EditText confirmPasswordEditText;
 
 
+
+    private Boolean passwordVisible;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,19 +60,20 @@ public class SignUpPage extends AppCompatActivity {
         passwordEditText = findViewById(R.id.etPassword);
         confirmPasswordEditText = findViewById(R.id.etConfirmPassword);
 
-        confirmPasswordEditText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+        passwordEditText = findViewById(R.id.etPassword);
+        confirmPasswordEditText = findViewById(R.id.etConfirmPassword);
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+        // Add TextWatcher to etConfirmPassword
+        confirmPasswordEditText.addTextChangedListener(confirmPasswordWatcher);
 
-            @Override
-            public void afterTextChanged(Editable s) {
-                // Compare passwords when text is changed in the confirm password field
-                comparePasswords();
-            }
-        });
+
+
+
+
+
+
+
+
 
 
         dbHelper = new DatabaseHelper(this);
@@ -88,7 +98,7 @@ public class SignUpPage extends AppCompatActivity {
                         // User found, do something with user object
                         String email = user.getEmail();
                         String password = user.getPassword();
-                        Toast.makeText(SignUpPage.this, "User with email "+email+" registered successfully!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignUpPage.this, "User with email " + email + " registered successfully!", Toast.LENGTH_SHORT).show();
 
                         // Navigate to SignIn activity
                         Intent intent = new Intent(SignUpPage.this, SignIn.class);
@@ -124,7 +134,44 @@ public class SignUpPage extends AppCompatActivity {
                 Shader.TileMode.CLAMP);
 
         textView.getPaint().setShader(shader);
+
+
+
+
+
+
     }
+
+    private TextWatcher confirmPasswordWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if(!passwordEditText.getText().toString().isEmpty()) {
+                // Check if password and confirm password match
+                if (passwordEditText.getText().toString().equals(confirmPasswordEditText.getText().toString())) {
+                    // If passwords match, set outline color to green
+                    confirmPasswordEditText.setBackgroundResource(R.drawable.textview_gradient_green);
+                } else {
+                    // If passwords don't match, set outline color to red
+                    confirmPasswordEditText.setBackgroundResource(R.drawable.textview_gradient_red);
+                }
+
+            }
+
+        }
+    };
+
+
+
+
+
+
+
 
 
     private void saveUser(String username, String email, String password) {
@@ -143,22 +190,7 @@ public class SignUpPage extends AppCompatActivity {
     }
 
 
-    private void comparePasswords() {
-        String password = passwordEditText.getText().toString();
-        String confirmPassword = confirmPasswordEditText.getText().toString();
 
-        if (!password.isEmpty() && !confirmPassword.isEmpty()) {
-            if (!password.equals(confirmPassword)) {
-                // Passwords don't match, set red background color to confirm password field
-                confirmPasswordEditText.setBackgroundColor(Color.RED);
-                changeDrawableLeft(confirmPasswordEditText, R.drawable.baseline_warning_incorrect);
-            } else {
-                // Passwords match, set default background color to confirm password field
-                confirmPasswordEditText.setBackgroundColor(Color.GREEN);
-                changeDrawableLeft(confirmPasswordEditText, R.drawable.baseline_check_24);
-            }
-        }
-    }
 
 
     private void changeDrawableLeft(EditText editText, int drawableResId) {
@@ -171,4 +203,8 @@ public class SignUpPage extends AppCompatActivity {
         // Set the drawable to the left of the EditText
         editText.setCompoundDrawables(drawable, null, null, null);
     }
+
+
+
+
 }
